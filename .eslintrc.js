@@ -41,6 +41,7 @@ module.exports = {
     // the react/jsx-uses-react and react/react-in-jsx-scope rules are no longer necessary after react 17.
     // https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
     // https://zhuanlan.zhihu.com/p/372100027
+    'no-unused-vars': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-no-bind': 'off',
@@ -56,6 +57,12 @@ module.exports = {
       'error',
       {
         devDependencies: true,
+      },
+    ],
+    'import/no-import-module-exports': [
+      'error',
+      {
+        exceptions: ['./src/index.js', './src/redux/store.js'],
       },
     ],
     'prettier/prettier': [
@@ -80,6 +87,8 @@ module.exports = {
           ['components', './src/components'],
           ['containers', './src/containers'],
           ['pages', './src/pages'],
+          ['configs', './src/configs'],
+          ['reduxs', './src/reduxs'],
         ],
         extensions: ['.js', '.jsx'],
       },

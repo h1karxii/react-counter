@@ -317,6 +317,8 @@ module.exports = function (webpackEnv) {
         'components': path.resolve(process.cwd(), 'src/components'),
         'containers': path.resolve(process.cwd(), 'src/containers'),
         'pages': path.resolve(process.cwd(), 'src/pages'),
+        'configs': path.resolve(process.cwd(), 'src/configs'),
+        'reduxs': path.resolve(process.cwd(), 'src/reduxs'),
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
