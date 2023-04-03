@@ -1,0 +1,15 @@
+.vscode
+config
+node_modules
+public
+scripts
+normalize.scss
+normalize.css
+lib
+dist
+build
+assets
+cca.config.js
+styleguide.config.js
+*.md
+

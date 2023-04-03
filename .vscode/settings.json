@@ -1,0 +1,21 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "postcss",
+    "javascript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true,
+  },
+
+  "editor.snippetSuggestions": "top",
+  "editor.tabCompletion": "onlySnippets",
+  "emmet.extensionsPath": ["./.vscode"]
+}

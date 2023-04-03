@@ -1,0 +1,11 @@
+.vscode
+config
+node_modules
+public
+scripts
+serviceWorker.js
+reportWebVitals.js
+setupTests.js
+lib
+dist
+build
