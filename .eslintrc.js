@@ -65,6 +65,7 @@ module.exports = {
         exceptions: ['./src/index.js', './src/redux/store.js'],
       },
     ],
+    'import/prefer-default-export': 'off',
     'prettier/prettier': [
       'error',
       {
