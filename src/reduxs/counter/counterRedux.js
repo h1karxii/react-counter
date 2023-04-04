@@ -7,6 +7,7 @@ import { takeLatest, take, put, all, delay, fork } from 'redux-saga/effects'
  */
 
 export const actionTypes = {
+  SET_COUNTER: 'SET_COUNTER',
   INCREMENT_START: 'INCREMENT_START',
   INCREMENT_SUCCESS: 'INCREMENT_SUCCESS',
   DECREMENT_START: 'DECREMENT_START',
@@ -22,6 +23,8 @@ export const actionTypes = {
  *
  * const actionCreator = () => ({type: actionType, payload: payload})
  */
+
+export const setCounter = createAction(actionTypes.SET_COUNTER)
 
 export const incrementStart = createAction(actionTypes.INCREMENT_START)
 
@@ -39,6 +42,9 @@ export const decrementSuccess = createAction(actionTypes.DECREMENT_SUCCESS)
 
 const counterReducer = createReducer({ number: 0 }, (builder) => {
   builder
+    .addCase(setCounter, (state, action) => {
+      state.number = action.payload
+    })
     .addCase(incrementSuccess, (state, action) => {
       state.number += action.payload
     })

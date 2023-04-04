@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 
+import InputField from 'components/InputField'
 import { ReactComponent as Logo } from 'assets/logo.svg'
 import { incrementStart, decrementStart } from 'reduxs/counter/counterRedux'
 
@@ -29,6 +30,7 @@ const Styles = styled.div`
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    margin-bottom: 50px;
 
     button {
       width: 100px;
@@ -72,6 +74,7 @@ function CounterContainer() {
           －
         </button>
       </div>
+      <InputField />
     </Styles>
   )
 }
