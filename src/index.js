@@ -2,8 +2,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
 
-import store from './reduxs/store'
+import store, { persistor } from './reduxs/store'
 import App from './App'
 import { isDevelopmentMode } from './configs'
 // import reportWebVitals from './reportWebVitals'
@@ -11,11 +12,13 @@ import { isDevelopmentMode } from './configs'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 )
 
 if (isDevelopmentMode && module.hot) {
